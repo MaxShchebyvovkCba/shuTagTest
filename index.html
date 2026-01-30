@@ -17,9 +17,15 @@ function identityFn(callback) {
        sub: '{{user.contactid}}' 
    });
  <script>
-    .lpc_window {
-               left: 10px;
-           }    
+(function () {
+  var interval = setInterval(function () {
+    var lpc = document.querySelector('.lpc_window');
+    if (!lpc) return;
+
+    lpc.style.setProperty('left', '10px', 'important');
+    lpc.style.setProperty('right', 'auto', 'important');
+  }, 500);
+})();
 </script>
 </script>
 
